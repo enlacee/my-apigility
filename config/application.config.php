@@ -22,7 +22,6 @@ return array(
         'ZF\\Rest',
         'ZF\\Rpc',
         'ZF\\Versioning',
-        'iglesia',
         'Iglesia'
     ),
     'module_listener_options' => array(

@@ -1,5 +1,5 @@
 <?php
-namespace iglesia\V1\Rest\Users;
+namespace Iglesia\V1\Rest\Users;
 
 use ArrayObject;
 
