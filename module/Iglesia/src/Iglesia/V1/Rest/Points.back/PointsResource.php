@@ -3,18 +3,9 @@ namespace Iglesia\V1\Rest\Points;
 
 use ZF\ApiProblem\ApiProblem;
 use ZF\Rest\AbstractResourceListener;
-use Zend\Stdlib\Parameters;
 
 class PointsResource extends AbstractResourceListener
 {
-    protected $mapper;
-
-
-    public function __construct($mapper)
-    {
-      $this->mapper = $mapper;
-    }
-
     /**
      * Create a resource
      *
@@ -67,9 +58,6 @@ class PointsResource extends AbstractResourceListener
      */
     public function fetchAll($params = array())
     {
-        if(in_array($params->type,array('host','rest','zone','guide')) || !isset($params->type)){
-          return $this->mapper->fetchAll($params);
-        }      
         return new ApiProblem(405, 'The GET method has not been defined for collections');
     }
 

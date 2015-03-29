@@ -130,7 +130,13 @@ return array(
                 0 => 'GET',
                 1 => 'POST',
             ),
-            'collection_query_whitelist' => array(),
+            'collection_query_whitelist' => array(
+                0 => 'type',
+                1 => 'xmin',
+                2 => 'xmax',
+                3 => 'ymin',
+                4 => 'ymax',
+            ),
             'page_size' => 25,
             'page_size_param' => null,
             'entity_class' => 'Iglesia\\V1\\Rest\\Points\\PointsEntity',
@@ -255,6 +261,7 @@ return array(
             'Iglesia\\V1\\Rest\\Searchs\\SearchsResource' => 'Iglesia\\V1\\Rest\\Searchs\\SearchsResourceFactory',
             'Iglesia\\V1\\Rest\\Places\\PlacesResource' => 'Iglesia\\V1\\Rest\\Places\\PlacesResourceFactory',
             'Iglesia\\V1\\Rest\\Points\\PointsResource' => 'Iglesia\\V1\\Rest\\Points\\PointsResourceFactory',
+            'Iglesia\\V1\\Rest\\Points\\Model\\PointsTable' => 'Iglesia\\V1\\Rest\\Points\\Factory\\PointsTableFactory',
         ),
     ),
 );
